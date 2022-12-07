@@ -57,10 +57,10 @@ RM = /usr/local/Cellar/cmake/3.24.1/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/ashlanahmed/school/3/4400/assignment3
+CMAKE_SOURCE_DIR = /Users/ashlanahmed/school/3/4400/fluid_simulation/assignment3base
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/ashlanahmed/school/3/4400/assignment3/build
+CMAKE_BINARY_DIR = /Users/ashlanahmed/school/3/4400/fluid_simulation/assignment3base/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -132,9 +132,9 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ashlanahmed/school/3/4400/assignment3/build/CMakeFiles /Users/ashlanahmed/school/3/4400/assignment3/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ashlanahmed/school/3/4400/fluid_simulation/assignment3base/build/CMakeFiles /Users/ashlanahmed/school/3/4400/fluid_simulation/assignment3base/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ashlanahmed/school/3/4400/assignment3/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ashlanahmed/school/3/4400/fluid_simulation/assignment3base/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -247,6 +247,30 @@ assignment_code/assignment3/PendulumNode.s: assignment_code/assignment3/Pendulum
 assignment_code/assignment3/PendulumNode.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment3.dir/build.make CMakeFiles/assignment3.dir/assignment_code/assignment3/PendulumNode.cpp.s
 .PHONY : assignment_code/assignment3/PendulumNode.cpp.s
+
+assignment_code/assignment3/SPHNode.o: assignment_code/assignment3/SPHNode.cpp.o
+.PHONY : assignment_code/assignment3/SPHNode.o
+
+# target to build an object file
+assignment_code/assignment3/SPHNode.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment3.dir/build.make CMakeFiles/assignment3.dir/assignment_code/assignment3/SPHNode.cpp.o
+.PHONY : assignment_code/assignment3/SPHNode.cpp.o
+
+assignment_code/assignment3/SPHNode.i: assignment_code/assignment3/SPHNode.cpp.i
+.PHONY : assignment_code/assignment3/SPHNode.i
+
+# target to preprocess a source file
+assignment_code/assignment3/SPHNode.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment3.dir/build.make CMakeFiles/assignment3.dir/assignment_code/assignment3/SPHNode.cpp.i
+.PHONY : assignment_code/assignment3/SPHNode.cpp.i
+
+assignment_code/assignment3/SPHNode.s: assignment_code/assignment3/SPHNode.cpp.s
+.PHONY : assignment_code/assignment3/SPHNode.s
+
+# target to generate assembly for a file
+assignment_code/assignment3/SPHNode.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment3.dir/build.make CMakeFiles/assignment3.dir/assignment_code/assignment3/SPHNode.cpp.s
+.PHONY : assignment_code/assignment3/SPHNode.cpp.s
 
 assignment_code/assignment3/SimpleNode.o: assignment_code/assignment3/SimpleNode.cpp.o
 .PHONY : assignment_code/assignment3/SimpleNode.o
@@ -1133,6 +1157,9 @@ help:
 	@echo "... assignment_code/assignment3/PendulumNode.o"
 	@echo "... assignment_code/assignment3/PendulumNode.i"
 	@echo "... assignment_code/assignment3/PendulumNode.s"
+	@echo "... assignment_code/assignment3/SPHNode.o"
+	@echo "... assignment_code/assignment3/SPHNode.i"
+	@echo "... assignment_code/assignment3/SPHNode.s"
 	@echo "... assignment_code/assignment3/SimpleNode.o"
 	@echo "... assignment_code/assignment3/SimpleNode.i"
 	@echo "... assignment_code/assignment3/SimpleNode.s"

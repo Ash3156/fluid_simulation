@@ -17,6 +17,7 @@
 #include "gloo/debug/PrimitiveFactory.hpp"
 #include "PendulumNode.hpp"
 #include "ClothNode.hpp"
+#include "SPHNode.hpp"
 
 namespace GLOO {
 SimulationApp::SimulationApp(const std::string& app_name,
@@ -91,5 +92,23 @@ void SimulationApp::SetupScene() {
   };
   auto cloth_node = make_unique<ClothNode>(cloth_init_positions, integration_step_, integrator_type_);
   root.AddChild(std::move(cloth_node));
+
+  // SPH Particle initialization - falling cube of particles initially
+  std::vector<glm::vec3> sph_init_positions;
+  for (float i = 0.; i < 2.0; i += 2. / 7.)
+  {
+    for (float j = 0.; j < 2.0; j += 2. / 7.)
+    {
+      for (float k = 0.; k < 2.0; k += 2. / 7.)
+      {
+        sph_init_positions.push_back(glm::vec3(i, j, k));
+      }
+    }
+  }
+
+  auto sph = make_unique<SPHNode>(sph_init_positions, integration_step_, integrator_type_);
+  std::cout << "HERE" << std::endl;
+
+  root.AddChild(std::move(sph));
 }
 }  // namespace GLOO

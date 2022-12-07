@@ -1,9 +1,9 @@
 
-if (NOT EXISTS "/Users/ashlanahmed/school/3/4400/assignment3/build/external/src/glfw-3.3.2/install_manifest.txt")
-  message(FATAL_ERROR "Cannot find install manifest: \"/Users/ashlanahmed/school/3/4400/assignment3/build/external/src/glfw-3.3.2/install_manifest.txt\"")
+if (NOT EXISTS "/Users/ashlanahmed/school/3/4400/fluid_simulation/assignment3base/build/external/src/glfw-3.3.2/install_manifest.txt")
+  message(FATAL_ERROR "Cannot find install manifest: \"/Users/ashlanahmed/school/3/4400/fluid_simulation/assignment3base/build/external/src/glfw-3.3.2/install_manifest.txt\"")
 endif()
 
-file(READ "/Users/ashlanahmed/school/3/4400/assignment3/build/external/src/glfw-3.3.2/install_manifest.txt" files)
+file(READ "/Users/ashlanahmed/school/3/4400/fluid_simulation/assignment3base/build/external/src/glfw-3.3.2/install_manifest.txt" files)
 string(REGEX REPLACE "\n" ";" files "${files}")
 
 foreach (file ${files})

@@ -1,4 +1,4 @@
-# Install script for directory: /Users/ashlanahmed/school/3/4400/assignment3
+# Install script for directory: /Users/ashlanahmed/school/3/4400/fluid_simulation/assignment3base
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,7 +39,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/Users/ashlanahmed/school/3/4400/assignment3/build/external/src/glfw-3.3.2/cmake_install.cmake")
+  include("/Users/ashlanahmed/school/3/4400/fluid_simulation/assignment3base/build/external/src/glfw-3.3.2/cmake_install.cmake")
 
 endif()
 
@@ -51,5 +51,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/ashlanahmed/school/3/4400/assignment3/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/ashlanahmed/school/3/4400/fluid_simulation/assignment3base/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
