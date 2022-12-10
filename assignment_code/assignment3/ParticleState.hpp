@@ -11,6 +11,13 @@ struct ParticleState {
   // The state of a particle system: positions and velocities.
   std::vector<glm::vec3> positions;
   std::vector<glm::vec3> velocities;
+  std::vector<glm::vec3> forces;
+  std::vector<glm::vec3> accelerations;
+  std::vector<float> densities;
+  std::vector<float> pressures;
+  std::vector<int> next;
+  float mass = 1.;
+  float size = 0.15;
 
   ParticleState& operator+=(const ParticleState& rhs) {
     if (positions.size() != rhs.positions.size() ||

@@ -517,38 +517,10 @@ CMakeFiles/assignment3.dir/external/src/imgui/examples/imgui_impl_opengl3.cpp.s:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/assignment3.dir/external/src/imgui/examples/imgui_impl_opengl3.cpp.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/ashlanahmed/school/3/4400/fluid_simulation/external/src/imgui/examples/imgui_impl_opengl3.cpp -o CMakeFiles/assignment3.dir/external/src/imgui/examples/imgui_impl_opengl3.cpp.s
 
-CMakeFiles/assignment3.dir/assignment_code/assignment3/ClothNode.cpp.o: CMakeFiles/assignment3.dir/flags.make
-CMakeFiles/assignment3.dir/assignment_code/assignment3/ClothNode.cpp.o: /Users/ashlanahmed/school/3/4400/fluid_simulation/assignment_code/assignment3/ClothNode.cpp
-CMakeFiles/assignment3.dir/assignment_code/assignment3/ClothNode.cpp.o: CMakeFiles/assignment3.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ashlanahmed/school/3/4400/fluid_simulation/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building CXX object CMakeFiles/assignment3.dir/assignment_code/assignment3/ClothNode.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/assignment3.dir/assignment_code/assignment3/ClothNode.cpp.o -MF CMakeFiles/assignment3.dir/assignment_code/assignment3/ClothNode.cpp.o.d -o CMakeFiles/assignment3.dir/assignment_code/assignment3/ClothNode.cpp.o -c /Users/ashlanahmed/school/3/4400/fluid_simulation/assignment_code/assignment3/ClothNode.cpp
-
-CMakeFiles/assignment3.dir/assignment_code/assignment3/ClothNode.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/assignment3.dir/assignment_code/assignment3/ClothNode.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/ashlanahmed/school/3/4400/fluid_simulation/assignment_code/assignment3/ClothNode.cpp > CMakeFiles/assignment3.dir/assignment_code/assignment3/ClothNode.cpp.i
-
-CMakeFiles/assignment3.dir/assignment_code/assignment3/ClothNode.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/assignment3.dir/assignment_code/assignment3/ClothNode.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/ashlanahmed/school/3/4400/fluid_simulation/assignment_code/assignment3/ClothNode.cpp -o CMakeFiles/assignment3.dir/assignment_code/assignment3/ClothNode.cpp.s
-
-CMakeFiles/assignment3.dir/assignment_code/assignment3/PendulumNode.cpp.o: CMakeFiles/assignment3.dir/flags.make
-CMakeFiles/assignment3.dir/assignment_code/assignment3/PendulumNode.cpp.o: /Users/ashlanahmed/school/3/4400/fluid_simulation/assignment_code/assignment3/PendulumNode.cpp
-CMakeFiles/assignment3.dir/assignment_code/assignment3/PendulumNode.cpp.o: CMakeFiles/assignment3.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ashlanahmed/school/3/4400/fluid_simulation/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building CXX object CMakeFiles/assignment3.dir/assignment_code/assignment3/PendulumNode.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/assignment3.dir/assignment_code/assignment3/PendulumNode.cpp.o -MF CMakeFiles/assignment3.dir/assignment_code/assignment3/PendulumNode.cpp.o.d -o CMakeFiles/assignment3.dir/assignment_code/assignment3/PendulumNode.cpp.o -c /Users/ashlanahmed/school/3/4400/fluid_simulation/assignment_code/assignment3/PendulumNode.cpp
-
-CMakeFiles/assignment3.dir/assignment_code/assignment3/PendulumNode.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/assignment3.dir/assignment_code/assignment3/PendulumNode.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/ashlanahmed/school/3/4400/fluid_simulation/assignment_code/assignment3/PendulumNode.cpp > CMakeFiles/assignment3.dir/assignment_code/assignment3/PendulumNode.cpp.i
-
-CMakeFiles/assignment3.dir/assignment_code/assignment3/PendulumNode.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/assignment3.dir/assignment_code/assignment3/PendulumNode.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/ashlanahmed/school/3/4400/fluid_simulation/assignment_code/assignment3/PendulumNode.cpp -o CMakeFiles/assignment3.dir/assignment_code/assignment3/PendulumNode.cpp.s
-
 CMakeFiles/assignment3.dir/assignment_code/assignment3/SPHNode.cpp.o: CMakeFiles/assignment3.dir/flags.make
 CMakeFiles/assignment3.dir/assignment_code/assignment3/SPHNode.cpp.o: /Users/ashlanahmed/school/3/4400/fluid_simulation/assignment_code/assignment3/SPHNode.cpp
 CMakeFiles/assignment3.dir/assignment_code/assignment3/SPHNode.cpp.o: CMakeFiles/assignment3.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ashlanahmed/school/3/4400/fluid_simulation/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building CXX object CMakeFiles/assignment3.dir/assignment_code/assignment3/SPHNode.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ashlanahmed/school/3/4400/fluid_simulation/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building CXX object CMakeFiles/assignment3.dir/assignment_code/assignment3/SPHNode.cpp.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/assignment3.dir/assignment_code/assignment3/SPHNode.cpp.o -MF CMakeFiles/assignment3.dir/assignment_code/assignment3/SPHNode.cpp.o.d -o CMakeFiles/assignment3.dir/assignment_code/assignment3/SPHNode.cpp.o -c /Users/ashlanahmed/school/3/4400/fluid_simulation/assignment_code/assignment3/SPHNode.cpp
 
 CMakeFiles/assignment3.dir/assignment_code/assignment3/SPHNode.cpp.i: cmake_force
@@ -559,24 +531,10 @@ CMakeFiles/assignment3.dir/assignment_code/assignment3/SPHNode.cpp.s: cmake_forc
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/assignment3.dir/assignment_code/assignment3/SPHNode.cpp.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/ashlanahmed/school/3/4400/fluid_simulation/assignment_code/assignment3/SPHNode.cpp -o CMakeFiles/assignment3.dir/assignment_code/assignment3/SPHNode.cpp.s
 
-CMakeFiles/assignment3.dir/assignment_code/assignment3/SimpleNode.cpp.o: CMakeFiles/assignment3.dir/flags.make
-CMakeFiles/assignment3.dir/assignment_code/assignment3/SimpleNode.cpp.o: /Users/ashlanahmed/school/3/4400/fluid_simulation/assignment_code/assignment3/SimpleNode.cpp
-CMakeFiles/assignment3.dir/assignment_code/assignment3/SimpleNode.cpp.o: CMakeFiles/assignment3.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ashlanahmed/school/3/4400/fluid_simulation/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building CXX object CMakeFiles/assignment3.dir/assignment_code/assignment3/SimpleNode.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/assignment3.dir/assignment_code/assignment3/SimpleNode.cpp.o -MF CMakeFiles/assignment3.dir/assignment_code/assignment3/SimpleNode.cpp.o.d -o CMakeFiles/assignment3.dir/assignment_code/assignment3/SimpleNode.cpp.o -c /Users/ashlanahmed/school/3/4400/fluid_simulation/assignment_code/assignment3/SimpleNode.cpp
-
-CMakeFiles/assignment3.dir/assignment_code/assignment3/SimpleNode.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/assignment3.dir/assignment_code/assignment3/SimpleNode.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/ashlanahmed/school/3/4400/fluid_simulation/assignment_code/assignment3/SimpleNode.cpp > CMakeFiles/assignment3.dir/assignment_code/assignment3/SimpleNode.cpp.i
-
-CMakeFiles/assignment3.dir/assignment_code/assignment3/SimpleNode.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/assignment3.dir/assignment_code/assignment3/SimpleNode.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/ashlanahmed/school/3/4400/fluid_simulation/assignment_code/assignment3/SimpleNode.cpp -o CMakeFiles/assignment3.dir/assignment_code/assignment3/SimpleNode.cpp.s
-
 CMakeFiles/assignment3.dir/assignment_code/assignment3/SimulationApp.cpp.o: CMakeFiles/assignment3.dir/flags.make
 CMakeFiles/assignment3.dir/assignment_code/assignment3/SimulationApp.cpp.o: /Users/ashlanahmed/school/3/4400/fluid_simulation/assignment_code/assignment3/SimulationApp.cpp
 CMakeFiles/assignment3.dir/assignment_code/assignment3/SimulationApp.cpp.o: CMakeFiles/assignment3.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ashlanahmed/school/3/4400/fluid_simulation/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building CXX object CMakeFiles/assignment3.dir/assignment_code/assignment3/SimulationApp.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ashlanahmed/school/3/4400/fluid_simulation/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building CXX object CMakeFiles/assignment3.dir/assignment_code/assignment3/SimulationApp.cpp.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/assignment3.dir/assignment_code/assignment3/SimulationApp.cpp.o -MF CMakeFiles/assignment3.dir/assignment_code/assignment3/SimulationApp.cpp.o.d -o CMakeFiles/assignment3.dir/assignment_code/assignment3/SimulationApp.cpp.o -c /Users/ashlanahmed/school/3/4400/fluid_simulation/assignment_code/assignment3/SimulationApp.cpp
 
 CMakeFiles/assignment3.dir/assignment_code/assignment3/SimulationApp.cpp.i: cmake_force
@@ -590,7 +548,7 @@ CMakeFiles/assignment3.dir/assignment_code/assignment3/SimulationApp.cpp.s: cmak
 CMakeFiles/assignment3.dir/assignment_code/assignment3/main.cpp.o: CMakeFiles/assignment3.dir/flags.make
 CMakeFiles/assignment3.dir/assignment_code/assignment3/main.cpp.o: /Users/ashlanahmed/school/3/4400/fluid_simulation/assignment_code/assignment3/main.cpp
 CMakeFiles/assignment3.dir/assignment_code/assignment3/main.cpp.o: CMakeFiles/assignment3.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ashlanahmed/school/3/4400/fluid_simulation/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building CXX object CMakeFiles/assignment3.dir/assignment_code/assignment3/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ashlanahmed/school/3/4400/fluid_simulation/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building CXX object CMakeFiles/assignment3.dir/assignment_code/assignment3/main.cpp.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/assignment3.dir/assignment_code/assignment3/main.cpp.o -MF CMakeFiles/assignment3.dir/assignment_code/assignment3/main.cpp.o.d -o CMakeFiles/assignment3.dir/assignment_code/assignment3/main.cpp.o -c /Users/ashlanahmed/school/3/4400/fluid_simulation/assignment_code/assignment3/main.cpp
 
 CMakeFiles/assignment3.dir/assignment_code/assignment3/main.cpp.i: cmake_force
@@ -604,7 +562,7 @@ CMakeFiles/assignment3.dir/assignment_code/assignment3/main.cpp.s: cmake_force
 CMakeFiles/assignment3.dir/assignment_code/common/helpers.cpp.o: CMakeFiles/assignment3.dir/flags.make
 CMakeFiles/assignment3.dir/assignment_code/common/helpers.cpp.o: /Users/ashlanahmed/school/3/4400/fluid_simulation/assignment_code/common/helpers.cpp
 CMakeFiles/assignment3.dir/assignment_code/common/helpers.cpp.o: CMakeFiles/assignment3.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ashlanahmed/school/3/4400/fluid_simulation/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building CXX object CMakeFiles/assignment3.dir/assignment_code/common/helpers.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ashlanahmed/school/3/4400/fluid_simulation/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building CXX object CMakeFiles/assignment3.dir/assignment_code/common/helpers.cpp.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/assignment3.dir/assignment_code/common/helpers.cpp.o -MF CMakeFiles/assignment3.dir/assignment_code/common/helpers.cpp.o.d -o CMakeFiles/assignment3.dir/assignment_code/common/helpers.cpp.o -c /Users/ashlanahmed/school/3/4400/fluid_simulation/assignment_code/common/helpers.cpp
 
 CMakeFiles/assignment3.dir/assignment_code/common/helpers.cpp.i: cmake_force
@@ -649,10 +607,7 @@ assignment3_OBJECTS = \
 "CMakeFiles/assignment3.dir/external/src/imgui/imgui_widgets.cpp.o" \
 "CMakeFiles/assignment3.dir/external/src/imgui/examples/imgui_impl_glfw.cpp.o" \
 "CMakeFiles/assignment3.dir/external/src/imgui/examples/imgui_impl_opengl3.cpp.o" \
-"CMakeFiles/assignment3.dir/assignment_code/assignment3/ClothNode.cpp.o" \
-"CMakeFiles/assignment3.dir/assignment_code/assignment3/PendulumNode.cpp.o" \
 "CMakeFiles/assignment3.dir/assignment_code/assignment3/SPHNode.cpp.o" \
-"CMakeFiles/assignment3.dir/assignment_code/assignment3/SimpleNode.cpp.o" \
 "CMakeFiles/assignment3.dir/assignment_code/assignment3/SimulationApp.cpp.o" \
 "CMakeFiles/assignment3.dir/assignment_code/assignment3/main.cpp.o" \
 "CMakeFiles/assignment3.dir/assignment_code/common/helpers.cpp.o"
@@ -692,17 +647,14 @@ assignment3: CMakeFiles/assignment3.dir/external/src/imgui/imgui_draw.cpp.o
 assignment3: CMakeFiles/assignment3.dir/external/src/imgui/imgui_widgets.cpp.o
 assignment3: CMakeFiles/assignment3.dir/external/src/imgui/examples/imgui_impl_glfw.cpp.o
 assignment3: CMakeFiles/assignment3.dir/external/src/imgui/examples/imgui_impl_opengl3.cpp.o
-assignment3: CMakeFiles/assignment3.dir/assignment_code/assignment3/ClothNode.cpp.o
-assignment3: CMakeFiles/assignment3.dir/assignment_code/assignment3/PendulumNode.cpp.o
 assignment3: CMakeFiles/assignment3.dir/assignment_code/assignment3/SPHNode.cpp.o
-assignment3: CMakeFiles/assignment3.dir/assignment_code/assignment3/SimpleNode.cpp.o
 assignment3: CMakeFiles/assignment3.dir/assignment_code/assignment3/SimulationApp.cpp.o
 assignment3: CMakeFiles/assignment3.dir/assignment_code/assignment3/main.cpp.o
 assignment3: CMakeFiles/assignment3.dir/assignment_code/common/helpers.cpp.o
 assignment3: CMakeFiles/assignment3.dir/build.make
 assignment3: external/src/glfw-3.3.2/src/libglfw3.a
 assignment3: CMakeFiles/assignment3.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/ashlanahmed/school/3/4400/fluid_simulation/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Linking CXX executable assignment3"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/ashlanahmed/school/3/4400/fluid_simulation/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Linking CXX executable assignment3"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/assignment3.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

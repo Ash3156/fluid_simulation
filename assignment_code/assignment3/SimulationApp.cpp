@@ -13,10 +13,7 @@
 #include "gloo/lights/AmbientLight.hpp"
 #include "gloo/cameras/ArcBallCameraNode.hpp"
 #include "gloo/debug/AxisNode.hpp"
-#include "SimpleNode.hpp"
 #include "gloo/debug/PrimitiveFactory.hpp"
-#include "PendulumNode.hpp"
-#include "ClothNode.hpp"
 #include "SPHNode.hpp"
 
 namespace GLOO {
