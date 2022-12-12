@@ -26,7 +26,7 @@ namespace GLOO
 
     private :
         float deltaTime;
-        float mass = 1.;
+        float mass = 0.02;
         float h = 0.15f;
         float curr_time_ = 0.;
         std::vector<glm::vec3> init_positions_;
@@ -41,15 +41,15 @@ namespace GLOO
         std::unique_ptr<IntegratorBase<SPHSystem, ParticleState>> integrator_;
         // pointers for particle scene nodes, used for updating positions in scene
         std::vector<SceneNode *> particle_ptrs;
-        std::shared_ptr<VertexObject> sphere_mesh_ = PrimitiveFactory::CreateSphere(0.05, 30, 30);
+        std::shared_ptr<VertexObject> sphere_mesh_ = PrimitiveFactory::CreateSphere(0.02, 30, 30);
         std::shared_ptr<ShaderProgram> shader_ = std::make_shared<PhongShader>();
         glm::vec3 turquoise = glm::vec3(0.18823529411f, 0.83529411764f, 0.78431372549f);
         const float poly6 = 315. / (64 * M_PI * std::pow(h, 9));
         const float self_density = mass * poly6 * pow(h, 6);
-        const float k = 461.52;
+        const float k = 1;
         const float rest_density = 1000.;
         const float spiky_grad = -45. / (M_PI * pow(h, 6));
-        const float viscosity = 3.5;
+        const float viscosity = 1.;
         const float epsilon = 0.0001f;
     };
 }

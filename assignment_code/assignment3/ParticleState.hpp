@@ -15,6 +15,7 @@ struct ParticleState {
   std::vector<float> densities;
   std::vector<float> pressures;
   std::vector<int> next;
+  std::vector<bool> at_bottom;
 
   ParticleState& operator+=(const ParticleState& rhs) {
     if (positions.size() != rhs.positions.size() ||

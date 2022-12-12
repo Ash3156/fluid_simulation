@@ -32,7 +32,7 @@ namespace GLOO
             particle_node->GetTransform().SetPosition(init_positions[i]);
             particle_node->CreateComponent<ShadingComponent>(shader_);
             particle_node->CreateComponent<RenderingComponent>(sphere_mesh_);
-            auto material = std::make_shared<Material>(turquoise, turquoise, turquoise, 0);
+            auto material = std::make_shared<Material>(turquoise, turquoise, turquoise, 1.f);
             particle_node->CreateComponent<MaterialComponent>(material);
 
             particle_ptrs.push_back(particle_node.get());
@@ -86,7 +86,7 @@ namespace GLOO
                         // check all neighbors
                         while (j != 0) {
                             float r = glm::length(state_.positions[i] - state_.positions[j]);
-                            if (r < h && j != i) {
+                            if (r * r < h * h && j != i) {
                                 curr_density += mass * poly6 * std::pow(h * h - r * r, 3);
                             }
                             j = state_.next[j];
@@ -99,7 +99,7 @@ namespace GLOO
         }
 
         // calculate forces for all particles (from pressure and viscosity)
-        for (int i = 1; i < particle_ptrs.size(); i++) {
+        for (int i = 1; i < particle_ptrs.size() + 1; i++) {
             state_.forces[i] = glm::vec3(0.);
             glm::ivec3 curr_cell = currCell(state_.positions[i]);
 
@@ -129,9 +129,12 @@ namespace GLOO
 
         // update positions for all particles
         for (int i = 1; i < particle_ptrs.size() + 1; i++) {
-            glm::vec3 acceleration = state_.forces[i] / state_.densities[i];
             // gravity
-            acceleration += glm::vec3(0., -9.8, 0.);
+            glm::vec3 acceleration = glm::vec3(0., -9.8, 0.) * 30.f;
+
+            // don't add in forces until hits bottom
+            // if (state_.at_bottom[i]) acceleration += state_.forces[i] / state_.densities[i];
+            acceleration += state_.forces[i] / state_.densities[i];
 
             // update velocity by acceleration * deltaTime
             state_.velocities[i] += acceleration * deltaTime;
@@ -141,21 +144,52 @@ namespace GLOO
 
             // Boundary Box checks - particles need to be in cube centered around origin with coord ranges (-2, 2)
             // fix position to be boundary and flip velocity
-            for (int j = 0; j < 3; j++) {
-                if (state_.positions[i][j] < -2.f) {
-                    state_.positions[i][j] = -2.f;
-                    state_.velocities[i][j] *= -0.5f;
-                }
-                if (state_.positions[i][j] > 2.f) {
-                    state_.positions[i][j] = 2.f;
-                    state_.velocities[i][j] *= -0.5f;
-                }
-            }
+            // for (int j = 0; j < 3; j++) {
+            //     if (state_.positions[i][j] < -1.f) {
+            //         state_.positions[i][j] = -1.f + 0.05;
+            //         state_.velocities[i][j] *= -0.8f;
+            //         state_.at_bottom[i] = true;
+            //     }
+            //     if (state_.positions[i][j] > 1.f) {
+            //         state_.positions[i][j] = 1.f - 0.05;
+            //         state_.velocities[i][j] *= -0.8f;
+            //         state_.at_bottom[i] = true;
+            //     }
+            // }
+
+        float boxWidth = 0.7f;
+        float elasticity = 0.5f;
+
+        if (state_.positions[i].y < h) {
+			state_.positions[i].y = -state_.positions[i].y + 2 * h + 0.0001f;
+			state_.velocities[i].y = -state_.velocities[i].y * elasticity;
+		}
+
+		if (state_.positions[i].x < h - boxWidth) {
+			state_.positions[i].x = -state_.positions[i].x + 2 * (h - boxWidth) + 0.0001f;
+			state_.velocities[i].x = -state_.velocities[i].x * elasticity;
+		}
+
+		if (state_.positions[i].x > -h + boxWidth) {
+			state_.positions[i].x = -state_.positions[i].x + 2 * -(h - boxWidth) - 0.0001f;
+			state_.velocities[i].x = -state_.velocities[i].x * elasticity;
+		}
+
+		if (state_.positions[i].z < h - boxWidth) {
+			state_.positions[i].z = -state_.positions[i].z + 2 * (h - boxWidth) + 0.0001f;
+			state_.velocities[i].z = -state_.velocities[i].z * elasticity;
+		}
+
+		if (state_.positions[i].z > -h + boxWidth) {
+			state_.positions[i].z = -state_.positions[i].z + 2 * -(h - boxWidth) - 0.0001f;
+			state_.velocities[i].z = -state_.velocities[i].z * elasticity;
+		}
+
 
             // std::cout << i << std::endl;
             // std::cout << particle_ptrs[i] << std::endl;
             // update the scene nodes themselves when totally done with position calculations
-            particle_ptrs[i]->GetTransform().SetPosition(state_.positions[i]);
+            particle_ptrs[i - 1]->GetTransform().SetPosition(state_.positions[i]);
             // std::cout << "GOOD" << std::endl;
         }
         // std::cout << "OUTSIDE" << std::endl;
@@ -186,6 +220,7 @@ namespace GLOO
         state_.densities = std::vector<float>(init_positions_.size() + 1, 0.);
         state_.pressures = std::vector<float>(init_positions_.size() + 1, 0.);
         state_.next = std::vector<int>(init_positions_.size() + 1, 0);
+        state_.at_bottom = std::vector<bool>(init_positions_.size() + 1, false);
     }
 
     void SPHNode::neighborUpdates() {

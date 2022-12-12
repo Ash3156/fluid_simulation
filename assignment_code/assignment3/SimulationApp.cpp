@@ -50,18 +50,35 @@ void SimulationApp::SetupScene() {
 
   // SPH Particle initialization - falling cube of particles initially
   std::vector<glm::vec3> sph_init_positions;
-  for (float i = 0.; i < 8. / 14.; i += 1. / 14.)
+  // for (float i = 0.; i < 12./14.; i += 1. / 14.)
+  // {
+  //   for (float j = 0.; j < 12. / 14.; j += 1. / 14.)
+  //   {
+  //     for (float k = 0.; k < 12. / 14.; k += 1. / 14.)
+  //     {
+  //       sph_init_positions.push_back(glm::vec3(i, j, k));
+  //     }
+  //   }
+  // }
+
+  int num_particles = 12;
+  float h = 0.15f;
+  float particle_sep = h + 0.01f;
+  for (int i = 0; i < num_particles; i++)
   {
-    for (float j = 0.; j < 8. / 14.; j += 1. / 14.)
-    {
-      for (float k = 0.; k < 8. / 14.; k += 1. / 14.)
-      {
-        sph_init_positions.push_back(glm::vec3(i, j, k));
+    for (int j = 0; j < num_particles; j++) {
+      for (int k = 0; k < num_particles; k++) {
+        float x_coord = (float(rand()) / float((RAND_MAX)) * 0.5f - 1) * h / 10;
+        float y_coord = (float(rand()) / float((RAND_MAX)) * 0.5f - 1) * h / 10;
+        float z_coord = (float(rand()) / float((RAND_MAX)) * 0.5f - 1) * h / 10;
+
+        glm::vec3 particle_pos = glm::vec3(i * particle_sep + x_coord - 1.5f, j * particle_sep + y_coord + h + 0.1f, k * particle_sep + z_coord - 1.5f);
+        sph_init_positions.push_back(particle_pos);
       }
     }
   }
 
-  auto sph = make_unique<SPHNode>(sph_init_positions, integration_step_, integrator_type_);
+    auto sph = make_unique<SPHNode>(sph_init_positions, integration_step_, integrator_type_);
 
   root.AddChild(std::move(sph));
 }
