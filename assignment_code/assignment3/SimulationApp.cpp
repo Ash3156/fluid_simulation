@@ -50,11 +50,11 @@ void SimulationApp::SetupScene() {
 
   // SPH Particle initialization - falling cube of particles initially
   std::vector<glm::vec3> sph_init_positions;
-  // for (float i = 0.; i < 12./14.; i += 1. / 14.)
+  // for (float i = 0.; i < 12./14.; i += 6. / 14.)
   // {
   //   for (float j = 0.; j < 12. / 14.; j += 1. / 14.)
   //   {
-  //     for (float k = 0.; k < 12. / 14.; k += 1. / 14.)
+  //     for (float k = 0.; k < 12. / 14.; k += 6. / 14.)
   //     {
   //       sph_init_positions.push_back(glm::vec3(i, j, k));
   //     }

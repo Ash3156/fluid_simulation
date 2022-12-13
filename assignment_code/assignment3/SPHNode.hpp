@@ -26,7 +26,7 @@ namespace GLOO
 
     private :
         float deltaTime;
-        float mass = 0.02;
+        float mass = 0.02f;
         float h = 0.15f;
         float curr_time_ = 0.;
         std::vector<glm::vec3> init_positions_;

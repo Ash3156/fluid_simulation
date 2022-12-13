@@ -130,7 +130,7 @@ namespace GLOO
         // update positions for all particles
         for (int i = 1; i < particle_ptrs.size() + 1; i++) {
             // gravity
-            glm::vec3 acceleration = glm::vec3(0., -9.8, 0.) * 30.f;
+            glm::vec3 acceleration = glm::vec3(0., -9.8, 0.) / mass;
 
             // don't add in forces until hits bottom
             // if (state_.at_bottom[i]) acceleration += state_.forces[i] / state_.densities[i];
